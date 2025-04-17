@@ -2,6 +2,8 @@
 
 這是一個簡單的待辦清單應用，主要是我練習前端技術 + API 串接的 side project。使用者可以註冊帳號、登入系統，並在登入後建立、查看、刪除自己的代辦事項。
 
+👉 [線上試玩傳送門](https://sawseisiong.github.io/Todo-List/) 
+
 ## 🚀 功能介紹
 
 - ✅ 註冊新帳號
@@ -19,3 +21,5 @@
 - HTML / CSS / JavaScript
 - Axios 串接 Todoo API
 - Token 驗證機制（註冊登入後取得 token 存入 localStorage）
+
+
