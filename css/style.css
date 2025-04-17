@@ -1,0 +1,681 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.index-page {
+  max-width: 1920px;
+  height: 100%;
+  background-image: linear-gradient(
+    174deg,
+    #ffd370 2%,
+    #ffd370 46%,
+    #ffffff 46%,
+    #ffffff 100%,
+    #e8e8e8 100%
+  );
+}
+
+body {
+  min-height: 100vh;
+}
+
+h1 {
+  font-family: "Baloo Tamma 2", cursive;
+  font-size: 48px;
+  color: #333333;
+  letter-spacing: 8.75px;
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+/*todo list 欄位*/
+.container {
+  margin: 0 auto;
+  width: 500px; /*500px*/
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+
+/*輸入代辦框*/
+.text {
+  width: 500px; /*500px*/
+  height: 48px;
+  background: #ffffff;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  border-radius: 10px;
+  border: none;
+  font-family: NotoSansCJKtc-Regular;
+  font-size: 16px;
+  color: #9f9a91;
+  letter-spacing: 0.7px;
+  padding-left: 24px;
+  position: relative;
+}
+
+/*新增按鈕*/
+.add {
+  background: #333333;
+  border-radius: 10px;
+  border-radius: 10px;
+  width: 40px; /*40px*/
+  height: 40px;
+  font-family: NotoSansCJKtc-Medium;
+  font-size: 32px;
+  color: #ffffff;
+  letter-spacing: 1.23px;
+  text-align: center;
+  line-height: 20px;
+  position: absolute;
+  transform: translateY(10%) translateX(-110%);
+}
+
+/*菜單欄位*/
+.todo-panel {
+  width: 500px; /*500px*/
+  height: 536px;
+  background: #ffffff;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  border-radius: 10px;
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tab-manu {
+  display: flex;
+}
+
+/*三個菜單*/
+.tab-all,
+.tab-nodone,
+.tab-isdone {
+  width: 166px; /*166px*/
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: NotoSansCJKtc-Regular;
+  font-size: 14px;
+  color: #9f9a91;
+  letter-spacing: 0.7px;
+}
+
+.active {
+  font-family: NotoSansCJKtc-Bold;
+  font-size: 14px;
+  color: #333333;
+  letter-spacing: 0.7px;
+  border-bottom: 2px solid black;
+}
+
+.todo-item {
+  display: flex;
+  margin-left: 24px;
+  padding-top: 10px;
+  align-items: center;
+}
+
+.content {
+  margin-left: 16px;
+
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.check {
+  appearance: none; /* 移除預設樣式 */
+  -webkit-appearance: none;
+  border: 1px solid #333333;
+  border-radius: 5px;
+  border-radius: 5px;
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+
+.check:checked + .content {
+  text-decoration: line-through;
+  color: #9f9a91;
+}
+
+.check:checked {
+  border: none;
+}
+
+.check:checked::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  width: 6px;
+  height: 10px;
+  border: solid orange;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.todo-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #efefef;
+  width: 100%;
+}
+
+.delete {
+  background-image: url(cancel.jpg);
+  width: 16px;
+  height: 16px;
+  background-size: contain;
+  display: none;
+}
+
+.todo-box:hover .delete {
+  display: block;
+  margin-right: 16px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  margin-bottom: 32px;
+  margin-left: 24px;
+  margin-right: 47px;
+}
+
+.todo-count {
+  font-family: NotoSansCJKtc-Regular;
+  font-size: 14px;
+  color: #333333;
+  letter-spacing: 0.7px;
+}
+
+.todo-clear {
+  font-family: NotoSansCJKtc-Regular;
+  font-size: 14px;
+  color: #9f9a91;
+  letter-spacing: 0.7px;
+}
+
+.logo-img {
+  width: 242px;
+  height: 38px;
+}
+
+.header {
+  margin-left: 34px;
+  margin-top: 16px;
+  margin-right: 34px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-bar {
+  display: flex;
+}
+
+.user-name {
+  margin-right: 24px;
+  font-family: Noto Sans TC;
+  font-weight: 700px;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.logout {
+  font-family: Noto Sans TC;
+  font-weight: 400px;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-decoration: none;
+  color: #333333;
+}
+
+.hidden {
+  display: none;
+}
+
+/* .text-add {
+  position: relative;
+} */
+
+.index-page {
+  position: relative;
+}
+
+.empty-inmg-txt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.empty-text {
+  margin-bottom: 20px;
+}
+
+/* .empty-text {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+} */
+
+@media (max-width: 568px) {
+  .user-name {
+    display: none;
+  }
+  .container {
+    margin: 0 auto;
+    width: 400px; /*500px*/
+    margin-top: 48px;
+    margin-bottom: 48px;
+  }
+  .tab-all,
+  .tab-nodone,
+  .tab-isdone {
+    width: 113.3px;
+  }
+  .user-bar {
+    align-items: center;
+  }
+  .todo-panel {
+    width: 400px;
+  }
+  .text {
+    width: 400px;
+  }
+}
+
+/* login 分頁 */
+
+.login-img {
+  margin-right: 13.37%;
+}
+
+.login-page {
+  background-color: #ffd370;
+}
+
+.login-page-box {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 87px;
+  display: flex;
+  justify-content: center;
+}
+
+.login-form {
+  margin-top: 62px;
+  width: 38%;
+}
+
+h2 {
+  color: #333333;
+  font-family: Noto Sans TC;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  margin-bottom: 30px;
+  white-space: nowrap;
+}
+
+.font {
+  font-family: Noto Sans TC;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  margin-bottom: 6px;
+}
+
+.text-email {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.red-font {
+  position: absolute;
+  top: 108%;
+  font-family: Noto Sans TC;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #d87355;
+}
+
+.email-login,
+.pwd-login {
+  width: 304px;
+  height: 47px;
+  gap: 10px;
+  border-radius: 10px;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  border: none;
+}
+
+.input-style {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.margin-hight {
+  margin-top: 40px;
+}
+
+.login-btn {
+  width: 128px;
+  height: 47px;
+  top: 414px;
+  left: 696px;
+  gap: 10px;
+  border-radius: 10px;
+  padding-top: 12px;
+  padding-right: 48px;
+  padding-bottom: 12px;
+  padding-left: 48px;
+  border: none;
+  background-color: #333333;
+  color: #ffffff;
+  margin-bottom: 24px;
+  margin-top: 10px;
+}
+
+.login-btn a {
+  text-decoration: none;
+  color: white;
+}
+
+.login-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register-link {
+  font-family: Noto Sans TC;
+  font-weight: 700px;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #333333;
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.mobile-logo {
+  display: none;
+}
+
+@media (max-width: 568px) {
+  .login-img {
+    display: none;
+  }
+  .mobile-logo {
+    display: block;
+    width: 312.6px;
+    margin-bottom: 16px;
+  }
+  .login-form {
+    margin-top: 62px;
+  }
+  .login-page-box {
+    margin: 0 auto;
+    margin-top: 87px;
+  }
+  .login-form-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  h2 {
+    font-size: 20px;
+  }
+}
+
+/* signUp 分頁 */
+.signup-page {
+  background-color: #ffd370;
+}
+
+.signup-page-box {
+  width: 800px;
+  margin: 0 auto;
+  margin-top: 87px;
+  display: flex;
+}
+
+.signup-form {
+  margin-left: 107px;
+
+  width: 304px;
+}
+
+.signup-btn {
+  width: 160px;
+  height: 47px;
+  top: 496px;
+  left: 680px;
+  gap: 10px;
+  border-radius: 10px;
+  padding-top: 12px;
+  padding-right: 48px;
+  padding-bottom: 12px;
+  padding-left: 48px;
+  border: none;
+  background-color: #333333;
+  color: #ffffff;
+  margin-bottom: 24px;
+  margin-top: 10px;
+}
+
+.login-link {
+  font-family: Noto Sans TC;
+  font-weight: 700px;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #333333;
+  text-decoration: none;
+}
+
+.email-signUp,
+.name-signUp,
+.pwd-signUp,
+.pwd-signUp2 {
+  width: 304px;
+  height: 47px;
+  gap: 10px;
+  border-radius: 10px;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  border: none;
+}
+
+.red-border {
+  border: 2px solid red;
+}
+
+@media (max-width: 568px) {
+  .signup-img {
+    display: none;
+  }
+  .mobile-logo {
+    display: block;
+    width: 312.6px;
+    margin-bottom: 16px;
+  }
+  .signup-form {
+    margin-top: 62px;
+  }
+  .signup-form-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  h2 {
+    font-size: 20px;
+  }
+}

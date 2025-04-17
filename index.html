@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="index-page">
+    <div class="header">
+      <div class="logo-img">
+        <img src="/css/logo.png" alt="todo List 的logo圖片" />
+      </div>
+      <div class="user-bar">
+        <p class="user-name">王小明的代辦</p>
+        <a href="#" class="logout">登出</a>
+      </div>
+    </div>
+    <div class="container">
+      <div class="text-add">
+        <input type="text" class="text" placeholder="新增待辦事項" />
+        <button class="add">+</button>
+      </div>
+      <div class="empty-inmg-txt">
+        <p class="empty-text">目前尚無待辦事項</p>
+        <div class="empty-img">
+          <img src="/css/empty 1.png" alt="顯示無代辦圖片" />
+        </div>
+      </div>
+      <div class="todo">
+        <div class="todo-panel">
+          <div class="tab-manu">
+            <div class="tab-all active">全部</div>
+            <div class="tab-nodone">待完成</div>
+            <div class="tab-isdone">已完成</div>
+          </div>
+
+          <ul class="todo-list">
+            <!-- <li class="todo-box">
+            <div class="todo-item">
+              <input type="checkbox" class="check" />
+              <div class="content">把冰箱發霉的檸檬拿去丟</div>
+            </div>
+            <div class="delete"></div>
+          </li> -->
+            <!-- <div class="todo-box">
+                <div class="todo-item">
+                  <input type="checkbox" class="check">
+                 <div class="content">把冰箱發霉的檸檬拿去丟</div>
+             </div>
+                     <div class="x"></div>
+            </div>
+            <div class="todo-box">
+                <div class="todo-item">
+                 <input type="checkbox" class="check">
+                 <div class="content">把冰箱發霉的檸檬拿去丟</div>
+                </div>
+                    <div class="x"></div>
+            </div> -->
+          </ul>
+          <div class="footer">
+            <div class="todo-count">0 個待完成項目</div>
+            <div class="todo-clear">清除已完成項目</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="all.js"></script>
+  </body>
+</html>
