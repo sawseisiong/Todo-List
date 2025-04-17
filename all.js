@@ -312,7 +312,7 @@ logOutDom.addEventListener("click", function () {
   axios
     .delete("https://todoo.5xcamp.us/users/sign_out", {})
     .then(function (res) {
-      window.location.href = "login.html";
+      window.location.href = "index.html";
     })
     .catch(function (error) {
       console.log(error);

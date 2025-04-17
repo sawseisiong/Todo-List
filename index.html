@@ -3,73 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Todo List</title>
+    <title>登入</title>
     <link rel="stylesheet" href="css/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body class="index-page">
-    <div class="header">
-      <div class="logo-img">
-        <img src="/css/logo.png" alt="todo List 的logo圖片" />
+  <body class="login-page">
+    <div class="login-page-box">
+      <div class="login-img">
+        <img src="/css/left.png" alt="一位拿著鉛筆的角色站在代辦事項面板前" />
       </div>
-      <div class="user-bar">
-        <p class="user-name">王小明的代辦</p>
-        <a href="#" class="logout">登出</a>
-      </div>
-    </div>
-    <div class="container">
-      <div class="text-add">
-        <input type="text" class="text" placeholder="新增待辦事項" />
-        <button class="add">+</button>
-      </div>
-      <div class="empty-inmg-txt">
-        <p class="empty-text">目前尚無待辦事項</p>
-        <div class="empty-img">
-          <img src="/css/empty 1.png" alt="顯示無代辦圖片" />
-        </div>
-      </div>
-      <div class="todo">
-        <div class="todo-panel">
-          <div class="tab-manu">
-            <div class="tab-all active">全部</div>
-            <div class="tab-nodone">待完成</div>
-            <div class="tab-isdone">已完成</div>
+      <div class="login-form">
+        <div class="login-form-box">
+            <div class="mobile-logo"><img src="/css/logo_lg.png" alt="logo"></div>
+          <h2>最實用的線上代辦事項服務</h2>
+          <div class="text-email">
+            <p class="font">Email</p>
+            <input type="text" class="email-login" placeholder="請輸入Email" />
+            <p class="red-font">此欄位不可為空</p>
           </div>
-
-          <ul class="todo-list">
-            <!-- <li class="todo-box">
-            <div class="todo-item">
-              <input type="checkbox" class="check" />
-              <div class="content">把冰箱發霉的檸檬拿去丟</div>
-            </div>
-            <div class="delete"></div>
-          </li> -->
-            <!-- <div class="todo-box">
-                <div class="todo-item">
-                  <input type="checkbox" class="check">
-                 <div class="content">把冰箱發霉的檸檬拿去丟</div>
-             </div>
-                     <div class="x"></div>
-            </div>
-            <div class="todo-box">
-                <div class="todo-item">
-                 <input type="checkbox" class="check">
-                 <div class="content">把冰箱發霉的檸檬拿去丟</div>
-                </div>
-                    <div class="x"></div>
-            </div> -->
-          </ul>
-          <div class="footer">
-            <div class="todo-count">0 個待完成項目</div>
-            <div class="todo-clear">清除已完成項目</div>
+          <div class="input-style margin-hight">
+            <p class="font">密碼</p>
+            <input type="password" class="pwd-login" placeholder="請輸入密碼" />
+          </div>
+          <div class="login-actions">
+            <button class="login-btn"><a href="#">登入</a></button>
+            <a href="/signUp.html" class="register-link">註冊帳號</a>
           </div>
         </div>
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
-    <script src="all.js"></script>
+    <script src="login.js"></script>
   </body>
 </html>

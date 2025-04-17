@@ -42,12 +42,10 @@ loginBtnDom.addEventListener("click", function (e) {
     .then(function (response) {
       const token = response.headers.authorization;
 
-
-
       localStorage.setItem("token", token);
-      window.location.href = "index.html";
+      window.location.href = "todo.html";
     })
     .catch(function (error) {
-      alert('帳號或密碼錯誤！');
+      alert("帳號或密碼錯誤！");
     });
 });

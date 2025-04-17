@@ -49,7 +49,7 @@ signUpBtnDom.addEventListener("click", function (e) {
       const token = response.headers.authorization;
 
       localStorage.setItem("token", token);
-      window.location.href = "index.html";
+      window.location.href = "todo.html";
       emailTxtDom.value = "";
       nameTxtDom.value = "";
       pwdTxtDom.value = "";
