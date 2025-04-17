@@ -415,23 +415,23 @@ h1 {
   }
   .container {
     margin: 0 auto;
-    width: 400px; /*500px*/
+    width: 350px; /*500px*/
     margin-top: 48px;
     margin-bottom: 48px;
   }
   .tab-all,
   .tab-nodone,
   .tab-isdone {
-    width: 113.3px;
+    width: 116.6px;
   }
   .user-bar {
     align-items: center;
   }
   .todo-panel {
-    width: 400px;
+    width: 350px;
   }
   .text {
-    width: 400px;
+    width: 350px;
   }
 }
 
